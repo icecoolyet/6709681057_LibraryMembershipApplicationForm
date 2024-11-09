@@ -14,7 +14,7 @@ body{
     height: 100vh;
     justify-content: center; 
     align-items: center;
-    background: linear-gradient(140deg,#71b7e6,#9b59b6);
+    background: linear-gradient(135deg,#71b7e6,#9b59b6);
 
 }
 .container{
@@ -33,12 +33,33 @@ body{
 .container .title::before{
     content: '';
     position: absolute;
+    left: 0;
+    bottom: 0;
     height: 3px;
     width: 30px;
-    background-color: #9b59b6;
+    background: linear-gradient(140deg,#71b7e6,#9b59b6);
 }
 
 .container form .user-details {
     display: flex;
     flex-wrap: wrap;
 }
+
+form .user-details .input-box{
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+
+}
+
+.user-details .input-box .user-details{
+    font-weight: 500;
+    margin-bottom: 5px;
+
+}
+
+.user-details .input-box input{
+    height: 45px;
+    
+    
+}
+
