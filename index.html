@@ -1,57 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content=""width=device-width,initial-scale 1.0>
-    <title>Document</title>
+    <title>ฟอร์มสมัครสมาชิกห้องสมุด</title>
 </head>
 <body>
-    <div class="container">
-        <div class="title">Registration</div>
-        <form action="#">
-            <div class="user-details">
-                <div class="input-box">
-                    <span class="details">Full Name💕💕💕</span>
-                    <input type="text" placeholder="Enter your name" required>
-                <div class="input-box">
-                    <span class="details">Username</span>
-                    <input type="text" placeholder="Enter your username" required>
-                <div class="input-box">
-                    <span class="details">Email</span>
-                    <input type="text" placeholder="Enter your Email" required>
-                <div class="input-box">
-                    <span class="details">Phone Number</span>
-                    <input type="text" placeholder="Enter your number" required>
-                <div class="input-box">
-                    <span class="details">Password</span>
-                    <input type="text" placeholder="Enter your password" required> 
-                <div class="input-box">
-                    <span class="details">Confirm Password</span>
-                    <input type="text" placeholder="confirm password" required> 
-                </div>
-            </div>
-            <div class="gender-details">
-                <span class="gender-title">Gender</span>
-                <div class="category">
-                    <label for="">
-                        <span class="dot one"></span>
-                        <span class="gender">Male</span>
-                    <label for="">
-                        <span class="dot one"></span>
-                        <span class="gender">female</span> 
-                    <label for="">
-                        <span class="dot one"></span>
-                        <span class="gender">Prefer not to say</span>       
+    <h2>ฟอร์มสมัครสมาชิกห้องสมุด</h2>
+    <form action="/submit-form" method="post">
+        <label for="fullname Thai">ชื่อ - นามสกุล :</label><br>
+        <input type="text" id="fullname Thai" name="fullname" placeholder="ใส่ ชื่อ-นามสกุล (ภาษาไทย)" required><br><br>
 
-                    </label>
-                </div>
-            </div>
-            <div class="button">
-                <input type="submit" value="Register">
-            </div>
-        </form>
-    </div>
+        <label for="fullname Eng">ชื่อ - นามสกุล (ภาษาอังกฤษ) :</label><br>
+        <input type="text" id="fullname Eng" name="fullname" placeholder="ใส่ ชื่อ-นามสกุล (ภาษาอังกฤษ)" required><br><br>
+
+        <label for="gender">เพศ:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">ชาย</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">หญิง</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">อื่นๆ</label><br><br>
+
+        <label for="student-id">รหัสนักศึกษา:</label><br>
+        <input type="text" id="student-id" name="student-id" placeholder="ใส่รหัสนักศึกษา" required><br><br>
+
+        <label for="faculty">คณะที่ศึกษา:</label><br>
+        <input type="text" id="faculty" name="faculty" placeholder="ใส่คณะที่กำลังศึกษา" required><br><br>
+
+        <label for="email">ที่อยู่อีเมล (E-mail address):</label><br>
+        <input type="email" id="email" name="email" placeholder="ใส่อีเมล" required><br><br>
+
+        <label for="dob">วันเดือนปีเกิด:</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label for="favorite-books">ประเภทของหนังสือที่สนใจ:</label><br>
+        <select id="favorite-books" name="favorite-books" multiple>
+            <option value="fiction">นิยาย</option>
+            <option value="Non-fiction">สารคดี</option>
+            <option value="science">วิทยาศาสตร์</option>
+            <option value="history">ประวัติศาสตร์</option>
+            <option value="technology">เทคโนโลยี</option>
+            <option value="Educational-Book">หนังสือเพื่อการศึกษา</option>
+            <option value="professional-Book">หนังสือวิชาชีพ</option>
+            <option value="Guides">หนังสือคู่มือ</option>
+            <option value="Children's Book">หนังสือเยาวชน(สำหรับเด็ก)</option>
+            <option value="Poetry">กวีนิพนธ์</option>
+            <option value="Religious-and-Philosophical-Book">หนังสือศาสนาและปรัชญา</option>
+            <option value="Entertainment-Book">หนังสือบันเทิง</option>
+            <option value="Reference-Book">หนังสืออ้างอิง</option>
+            <option value="other">อื่นๆ</option>
+        </select><br><br>
+
+        <label>ความต้องการรับข่าวสารข้อมูลของห้องสมุดทางอีเมลหรือไม่:</label><br>
+        <input type="radio" id="subscribe-yes" name="subscribe" value="yes">
+        <label for="subscribe-yes">ใช่</label><br>
+        <input type="radio" id="subscribe-no" name="subscribe" value="no">
+        <label for="subscribe-no">ไม่ใช่</label><br><br>
+
+        <input type="submit" value="ยืนยันฟอร์มสมัครสมาชิก">
+    </form>
 </body>
 </html>

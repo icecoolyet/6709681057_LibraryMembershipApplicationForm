@@ -1,65 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    margin: 20px;
 }
 
-.title{
-    max-width: 300px;
-}
-body{
-    display: flex;
-    height: 100vh;
-    justify-content: center; 
-    align-items: center;
-    background: linear-gradient(135deg,#71b7e6,#9b59b6);
-
-}
-.container{
-    max-width: 700px;
-    width: 100%;
-    background: #fff;
-    padding: 25px 30px;
-    border-radius: 5px;
+h2 {
+    text-align: center;
+    color: #333;
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
 
-.container .title{
-    font-size: 25px;
-    font-weight: 500;
-}
-/*  before คือ มากก่อนขีดข้างบนนั้นแหละ */
-.container .title::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 30px;
-    background: linear-gradient(140deg,#71b7e6,#9b59b6);
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.container form .user-details {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-form .user-details .input-box{
-    margin: 20px 0 12px 0;
-    width: calc(100% / 2 - 20px);
-
-}
-
-.user-details .input-box .user-details{
-    font-weight: 500;
+label {
+    font-weight: bold;
     margin-bottom: 5px;
-
+    display: block;
+    color: #555;
 }
 
-.user-details .input-box input{
-    height: 45px;
-    
-    
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+select {
+    height: auto;
+}
+
+form div {
+    margin-bottom: 10px;
 }
 
